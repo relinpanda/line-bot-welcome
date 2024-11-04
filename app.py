@@ -37,7 +37,7 @@ def callback():
         return 'OK'
     return 'OK'
 
-# 處理機器人被加入群組的事件
+''' # 處理機器人被加入群組的事件
 @handler.add(JoinEvent)
 def handle_join(event):
     logger.info("Bot joined group/room")
@@ -45,6 +45,7 @@ def handle_join(event):
         send_welcome_message(event)
     except Exception as e:
         logger.error(f"Error in handle_join: {str(e)}")
+'''
 
 # 處理新成員加入的事件
 @handler.add(MemberJoinedEvent)
@@ -58,7 +59,7 @@ def handle_member_joined(event):
 # 共用的歡迎訊息函數
 def send_welcome_message(event):
     welcome_message = """歡迎加入本群組！
-    
+
 ▍服務時間與回應
 
 ❶ 週一至週五 9:00-18:00、午休 12:00-13:30
